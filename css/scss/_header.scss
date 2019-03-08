@@ -1,0 +1,46 @@
+
+body {
+	background-color: $black;
+}
+
+.topo {
+	background: url("dist/images/intro2.jpg") no-repeat center;
+	background-size: cover;
+	height: 80vh;
+	margin: 130px 10px 10px 10px;
+	@include d(mobile){
+		height: 100vh;
+	}
+}
+
+.text {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-width: 1380px;
+	margin: 0 auto;
+	padding: 60px 0 80px 0;
+	text-align: left;
+
+	//Text H1
+	h1 {
+		@include h1();
+		margin: 0px 0 20px 50px;
+		@include d(mobile){
+			margin: 10px auto;
+			text-align: left;
+			max-width: 100%;
+		}
+	}
+
+	//Text H2
+	h2 {
+		@include h2();
+		margin: 150px 0 20px 50px;
+		@include d(mobile){
+			margin: 50px auto 0 auto;
+			text-align: left;
+			max-width: 100%;
+		}
+	}
+}

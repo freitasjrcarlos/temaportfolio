@@ -1,0 +1,92 @@
+//Fontes
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,700');
+@font-face {
+	font-family: Kelson;
+  src: url('font/KelsonSansRegular.otf');
+}
+
+
+/* Variáveis */
+
+//Tipografia
+$font-title:'EB Garamond', serif;
+$font-body: 'Rajdhani', sans-serif;
+
+@mixin fontSize($size){
+	@if $size == 16 {
+		font-size: 1em;
+		line-height: 20px;
+	}
+	@else if $size == 20 {
+		font-size: 1.25em;
+		line-height: 22px;
+	}
+	@else if $size == 22 {
+		font-size: 1.375em;
+		line-height: 22px;
+	}
+	@else if $size == 28 {
+		font-size: 1.75em;
+		line-height: 28px;
+	}
+	@else if $size == 50 {
+		font-size: 3.125em;
+		line-height: 50px;
+	}
+	@else if $size == 60 {
+		font-size: 3.75em;
+		line-height: 60px;
+	}
+	@else if $size == 68 {
+		font-size: 4.25em;
+		line-height: 68px;
+	}
+	@else if $size == 75 {
+		font-size: 4.687em;
+		line-height: 70px;
+	}
+}
+
+@mixin h1(){
+	font-family: $font-body;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $white;
+	@include fontSize(75);
+	@include d(mobile){
+		font-size: 4.25em;
+		line-height: 68px;
+	}
+}
+
+@mixin h2(){
+	font-family: $font-title;
+	font-style: italic;
+	color: $dourado;
+	@include fontSize(68);
+	@include d(mobile){
+		font-size: 3.75em;
+		line-height: 60px;
+	}
+}
+
+
+
+
+//cores
+$dourado: #a68253;
+$black: #1d1d1d;
+$black-cinza: #2b2b2b;
+$white: #fefefe;
+$cinza: #868686;
+
+
+//Efeitos
+@mixin sombra($sombra){
+	 -webkit-filter: drop-shadow($sombra);
+  -moz-filter: drop-shadow($sombra);
+  -ms-filter: drop-shadow($sombra);
+  -o-filter: drop-shadow($sombra);
+  filter: drop-shadow($sombra);
+}

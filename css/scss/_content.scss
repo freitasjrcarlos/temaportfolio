@@ -1,0 +1,236 @@
+//Conteúdo da página HOME
+
+
+//Container da primeira row com três colunas
+.tree-coluns {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1380px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	@include d(mobile){
+		max-width: 600px;
+		margin: 0 auto;
+		justify-content: center;
+	}
+
+	//H3
+	h3{
+		@include h1();
+		max-width: 100%;
+	}
+
+	//H4
+	h4{
+		@include h2();
+		@include fontSize(28);
+	}
+
+	//Image
+	img {
+		width: 100px;
+		margin: 150px 0 50px 0;
+	}
+}
+
+//Primeira coluna - Row 1
+.colum-one {
+		background: url("dist/images/maoone-min.png") no-repeat center;
+		background-size: cover;
+		width: 435px;
+		height: 550px;
+		margin: 0 10px 10px 10px;
+		@include d(mobile) {
+			max-width: 100vw;
+		}
+
+		//IMG hover
+		img:hover {
+			transform: rotate(20deg);
+			transition: 0.2s;
+		}
+}
+
+//Segunda coluna - Row 1
+.colum-two {
+		background: url("dist/images/maotwo-min.png") no-repeat center;
+		background-size: cover;
+		width: 435px;
+		height: 550px;
+		margin: 0 10px 10px 0;
+		@include d(mobile) {
+			max-width: 100vw;
+		}
+
+		//IMG hover
+		img:hover {
+			transform: rotate(20deg);
+			transition: 0.2s;
+		}
+}
+
+
+//Terceira coluna - Row 1
+.colum-tree {
+		background: url("dist/images/maotres-min.png") no-repeat center;
+		background-size: cover;
+		width: 435px;
+		height: 550px;
+		margin: 0 10px 10px 0;
+		@include d(mobile) {
+			max-width: 100vw;
+		}
+
+		//IMG Hover
+		img:hover {
+			transform: rotate(20deg);
+			transition: 0.2s;
+		}
+}
+
+
+//Container da segunda row com duas colunas
+.two-coluns {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1380px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+	@include d(mobile){
+	}
+
+	//H3
+	h3 {
+		@include h1();
+		margin: 10px 0 30px 50px;
+		@include d(mobile){
+			margin: 10px 0 30px 10px;
+			text-align: left;
+			max-width: 100%;
+		}
+	}
+
+	//H4
+	h4 {
+		@include h2();
+		@include fontSize(60);
+		margin: 200px 0 0 50px;
+		@include d(mobile){
+			margin: 200px 0 0 10px;
+			text-align: left;
+			max-width: 100%;
+		}
+	}
+}
+
+
+//Container da coluna da esquerda
+.left {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 0 10px 10px 10px;
+	padding: 0;
+}
+
+//Primeira linha da coluna esquerda
+.sub-left-one {
+	background: url("dist/images/sub-left-one.jpg") no-repeat center;
+	background-size: cover;
+	width: 658px;
+	height: 500px;	
+	margin: 0 0 10px 0;
+	padding: 0;			
+		@include d(mobile) {
+			max-width: 90vw;
+			margin: 0 10px 10px 0;
+			text-align: left;
+			h3{@include fontSize(50);}
+		}
+
+		@include d(tablet){
+			margin: 0 10px;
+			text-align: center;
+		}
+}
+
+
+//Segunda linha da coluna esquerda
+.sub-left-two {
+	background: url("dist/images/sub-left-two.jpg") no-repeat center;
+	background-size: cover;
+	width: 658px;
+	height: 500px;			
+		@include d(mobile) {
+			max-width: 90vw;
+			margin: 0 10px 0 0;
+			text-align: left;
+		}
+
+		@include d(tablet){
+			margin: 0 10px;
+			text-align: center;
+		}
+}
+
+//Coluna da direita
+.right {
+	background: url("dist/images/computer.jpg") no-repeat center;
+	background-size: cover;
+	width: 658px;
+	height: 1010px;
+	margin: 0 10px 10px 0;
+	padding: 0;			
+		@include d(mobile) {
+			max-width: 100%;
+			margin: 0 10px 0 10px;
+			text-align: left;
+		}
+
+		@include d(table){
+			max-width: 100%;
+			margin: 0 10px;
+			text-align: center;
+		}
+
+		//H3
+		h3 {
+			@include h1();
+			margin: 10px 0 30px 50px;
+		}
+
+		//H4
+		h4 {
+			@include h2();
+			@include fontSize(60);
+			margin: 710px 0 0 50px;
+		}
+}
+
+
+//Botão
+.btn {
+	font-family: $font-body;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: $dourado;
+	border: 2px solid $dourado;
+	background-color: transparent;
+	box-shadow: -4px 4px 30px 3px rgba(0,0,0,.35);
+	transition: all .3s ease;
+	width: 120px;
+	height: 25px;
+	padding: 10px 50px 10px 50px;
+	margin: 0 0 0 50px;	
+	@include fontSize(16);
+}
+
+.btn:hover {
+	color: $white;
+	border: 2px solid $white;
+	box-shadow: -4px 4px 30px 3px rgba(0,0,0,.35);
+	transition: all .3s ease;
+}

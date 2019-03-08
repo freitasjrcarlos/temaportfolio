@@ -1,0 +1,111 @@
+/******************* Sobre ********************/
+
+.caption {
+	background-size: cover;
+	margin: 0 10px 10px 10px;
+	@include d(mobile){
+		max-width: 580px;
+	}
+}
+
+.caption1 {
+	background: url("dist/images/sobreIMG1.png") no-repeat center;	
+}
+
+.caption2 {
+	background: url("dist/images/sobreIMG2.png") no-repeat center;
+}
+
+.caption3 {
+	background: url("dist/images/sobreIMG3.png") no-repeat center;
+}
+
+.caption4 {
+	background: url("dist/images/sobreIMG4.png") no-repeat center;
+}
+
+.caption5 {
+	background: url("dist/images/sobreIMG5.png") no-repeat center;
+}
+
+.caption6 {
+	background: url("dist/images/sobreIMG6.png") no-repeat center;
+	.paragrafo {
+		font-family: $font-title;
+		@include fontSize(22);
+		color: $cinza;
+		padding: 30px 0 0 0;
+		max-width: 600px;
+		text-align: center;
+		margin: 0 auto;
+		@include d(mobile){
+			@include fontSize(20);
+			padding: 20px 0 0 0;
+		}
+	}
+	@include d(mobile){
+		max-width: 580px;
+		h1 {
+			@include fontSize(50);
+		}
+		h2{
+			@include fontSize(28);
+		}
+	}
+}
+
+// Container Default
+ @mixin container(){
+ 	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-width: 1380px;
+	height: 100vh;
+	text-align: center;
+ }
+
+ .container {
+	@include container();
+	margin: 0 auto;
+	a {
+		margin: 20px auto;
+		@include d(mobile){
+			margin: 20px auto;
+		}
+	}
+}
+ 
+ .containerPrimary {
+		margin: 120px 0 0 0;
+	}	
+
+	.paragrafo {
+		font-family: $font-title;
+		@include fontSize(22);
+		color: $cinza;
+		padding: 50px 0 0 0;
+		max-width: 1000px;
+		text-align: center;
+		margin: 0 auto;
+		@include d(mobile){
+			@include fontSize(20);
+			padding: 20px 0 0 0;
+		}
+}
+
+.sobre-title {
+	@include h1();
+	margin: 30vh 0 0 0;
+	@include d(mobile){
+		@include fontSize(50);
+	}
+}
+
+.sobre-sub-title {
+	@include h2();
+	@include fontSize(50);
+	@include d(mobile){
+		@include fontSize(28);
+	}
+}
+	

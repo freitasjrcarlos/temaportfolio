@@ -1,0 +1,89 @@
+/*************************************** JOBS ***************************************/
+.container-jobs {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1380px;
+	text-align: center;
+		@include d(mobile){
+			max-width: 580px;
+		} 
+}
+
+.jobs-site {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-width: 1380px;
+	text-align: center;
+	margin: 130px auto 10px auto;
+
+}
+
+.jobs-site img {
+	max-width: 600px;	
+	max-height: 1800px;
+	margin: 0 auto;
+	padding: 10px;
+	@include d(mobile){
+		max-width: 100%;		
+	}
+}
+
+.jobs-marketing {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1380px;
+	text-align: center;
+	flex-direction: row;
+	margin: 0px 10px 10px 10px;
+}
+
+.jobs-marketing img {
+	width: 500px;	
+	height: 500px;
+	margin: 0 auto;
+	padding: 10px;	
+	@include d(mobile){
+		max-width: 100%;	
+		max-height: 350px;	
+	}
+}
+
+.jobs-logo {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1380px;
+	justify-content: space-between;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.jobs-logo img {
+	width: 300px;	
+	height: 200px;
+	margin: 0 10px 10px 10px;
+	padding: 10px;	
+	@include d(mobile){
+		max-width: 100%;		
+	}
+}
+
+
+.job-title {
+	@include h1();
+	margin: 50vh 0 0 0;
+	text-align: center;
+}
+
+.container-jobs img{
+	box-shadow: -4px 4px 30px 3px rgba(0,0,0,.35);
+	transition: all .3s ease;
+}
+
+.container-jobs img:hover {
+	transform:scale(1.05);
+	transition: 0.2s;
+	box-shadow: -4px 4px 30px 3px rgba(0,0,0,.35);
+	transition: all .3s ease;
+}
+
